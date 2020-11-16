@@ -1,0 +1,19 @@
+section {
+    margin-inline: 2rem;
+
+    & > p {
+        margin-block: 0;
+    }
+
+    @nest main > & {
+        mmargin-inline: 0;
+    }
+}
+
+/* becomes */
+section
+section > p 
+main > section 
+{ margin-inline: 2 rem; }
+{ margin-block: 0; }
+{ margin-inline: 0; }
